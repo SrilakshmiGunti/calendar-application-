@@ -1,0 +1,112 @@
+/* Calendar.css */
+
+.calendar {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background: url('./flat-lay-business-desk-arrangement.jpg') center/cover no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+  color: #fff;
+}
+
+.calendar h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Grid layout for events */
+  gap: 30px; /* Increased gap between event cards */
+  margin-top: 20px;
+}
+
+.calendar-event {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.calendar-event:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.calendar-event a {
+  font-size: 18px;
+  color: #007bff;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.edit-btn, .delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  margin: 5px 0; /* Add some margin between buttons */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Adjust button width to make it more aligned */
+}
+
+.edit-btn {
+  background-color: #28a745;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  opacity: 0.9;
+}
+
+.add-event-btn {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.add-event-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

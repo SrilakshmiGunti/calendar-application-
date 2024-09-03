@@ -1,0 +1,65 @@
+/* EventForm.css */
+
+.event-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url('./12-may-inscription-with-notepad-tulips.jpg') center/cover no-repeat;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease-in-out;
+  z-index: 1000;
+  color: #fff;
+}
+
+.event-form h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.event-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.event-form input,
+.event-form select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.event-form button {
+  padding: 8px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.event-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translate(-50%, -70%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}

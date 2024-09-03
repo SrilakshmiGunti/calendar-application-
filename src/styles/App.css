@@ -1,0 +1,52 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .App {
+    text-align: center;
+    background: url("../components/flat-lay-wedding-planner-resources-arrangement.jpg");
+    height: 100vh;
+    background-size: cover;
+  }
+  
+  .calendar {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .calendar-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .calendar-event {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+  }
+  
+  .calendar-event:hover {
+    transform: scale(1.05);
+  }
+  
+  .add-event-btn {
+    padding: 10px 15px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-event-btn:hover {
+    background-color: #0056b3;
+  }
+  

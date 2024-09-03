@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'; // Updated
+import Calendar from './components/Calendar';
+import EventDetails from './components/EventDetails';
+import { EventProvider } from './contexts/EventContext';
+import './styles/App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <EventProvider>
+      <Router>
+        <div className="App">
+          <Routes> {/* Changed from Switch to Routes */}
+            <Route path="/" element={<Calendar />} />
+            <Route path="/event/:id" element={<EventDetails />} />
+          </Routes>
+        </div>
+      </Router>
+    </EventProvider>
   );
-}
+};
 
 export default App;

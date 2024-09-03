@@ -1,0 +1,54 @@
+/* EventDetails.css */
+
+.event-details {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  background-image: url('https://source.unsplash.com/800x600/?details,notepad');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInDetails 0.8s ease-in-out;
+  color: #333;
+}
+
+.event-details h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.event-details p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.event-details a {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.event-details a:hover {
+  color: #0056b3;
+}
+
+/* Fade-in animation for details */
+@keyframes fadeInDetails {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
